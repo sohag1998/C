@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
-int reverse = 0;
+int rev = 0;
 
 void reverseNumber(int num) {
     if (num == 0)
         return;
 
-    reverse = reverse * 10 + (num % 10);
+    rev = rev * 10 + (num % 10);
     reverseNumber(num / 10);
 }
 
@@ -20,7 +20,7 @@ int main() {
 
     reverseNumber(num);
 
-    cout << "Reversed number: " << reverse << endl;
+    cout << "Reversed number: " << rev << endl;
 
     return 0;
 }
